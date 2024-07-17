@@ -143,7 +143,7 @@ const BuySection: React.FC = () => {
           </a>
         </div>
         <div className="flex flex-col gap-7 justify-center items-center">
-          <p className="text-3xl md:text-4xl font-extrabold">JOIN THE US</p>
+          <p className="text-3xl md:text-4xl font-extrabold">JOIN THE PACK</p>
           <ul className="flex flex-wrap gap-5 items-center justify-center text-sm md:text-md text-white">
             <li>
               <a
@@ -495,7 +495,7 @@ const Footer: React.FC = () => {
           
         </div>
         <div className="flex flex-col gap-5 md:gap-7 justify-center items-center">
-          <p className="text-3xl md:text-4xl font-extrabold text-white">JOIN THE US</p>
+          <p className="text-3xl md:text-4xl font-extrabold text-white">JOIN THE PACK</p>
           <ul className="flex flex-wrap items-center justify-center text-sm md:text-md text-white">
             <li>
               <a

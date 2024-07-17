@@ -57,7 +57,7 @@ const BuySection: React.FC = () => {
           </a>
         </div>
         <div className="flex flex-col gap-7 justify-center items-center">
-          <p className="text-xl md:text-4xl font-extrabold">JOIN THE US</p>
+          <p className="text-xl md:text-4xl font-extrabold">JOIN THE PACK</p>
           <ul className="flex flex-wrap gap-1 md:gap-5 items-center justify-center text-sm md:text-md text-white">
             <li>
               <a
