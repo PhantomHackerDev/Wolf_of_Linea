@@ -32,7 +32,7 @@ const BuySection: React.FC = () => {
               <p className="text-[#e9c67e] py-3">Join the pack</p>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="text-[#e9c67e] py-3">Howl to the moon</p>
+              <p className="text-[#e9c67e] py-3">How to the moon</p>
             </SwiperSlide>
           </Swiper>
         </div>

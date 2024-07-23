@@ -7,6 +7,8 @@ import { cookieToInitialState } from 'wagmi'
 import Web3ModalProvider from '@/context'
 import { config } from '@/config'
 
+import { ToastContainer } from "react-toastify";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        
+      <ToastContainer autoClose={3000} style={{ right: "0px" }} />
         <Web3ModalProvider initialState={initialState}>
           {children}
           </Web3ModalProvider>

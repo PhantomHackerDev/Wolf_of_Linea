@@ -11,6 +11,7 @@ import { ListSection } from "@/component/section/listSection";
 import { Bigwin } from "@/component/section/bigWin";
 import { Footer } from "@/component/section/footer";
 
+
 const Dashboard: React.FC = () => {
   return (
     <div className="flex flex-col">
@@ -23,6 +24,7 @@ const Dashboard: React.FC = () => {
       <ListSection />
       <Bigwin />
       <Footer />
+      
     </div>
   );
 };
