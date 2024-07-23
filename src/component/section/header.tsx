@@ -1,24 +1,66 @@
 "use client";
 import React, {useState} from "react";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount } from "wagmi";
+import { toast } from "react-toastify";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { open } = useWeb3Modal();
-  
+  const account = useAccount();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const dispHeroButton = () => {
+    switch (account.status) {
+      case "connecting":
+        return (
+          <svg className="h-6 w-6 animate-spin m-auto" viewBox="0 0 100 100">
+            <circle
+              fill="none"
+              stroke-width="10"
+              className="stroke-current opacity-40"
+              cx="50"
+              cy="50"
+              r="40"
+            />
+            <circle
+              fill="none"
+              stroke-width="10"
+              className="stroke-current"
+              stroke-dasharray="250"
+              stroke-dashoffset="210"
+              cx="50"
+              cy="50"
+              r="40"
+            />
+          </svg>
+        );
+      case "disconnected":
+        return "Wallet Connect";
+      case "connected":
+        return (
+          account.address.substring(0, 5) +
+          "..." +
+          account.address.substring(
+            account.address.length - 5,
+            account.address.length
+          )
+        );
+    }
+  };
   return (
-    <nav className="bg-[#0d0b30] sticky top-0 z-20 md:px-36 sm:p-4 w-full">
-      <div className="flex flex-row  items-center justify-between p-4">
-        <a
-          href="/"
-          className="text-white text-lg md:text-2xl font-bold"
-        >
-          Wolf of Linea
-        </a>
+    <nav className="bg-[#0d0b30] sticky top-0 z-20 md:px-28 sm:p-4 w-full">
+      <div className="flex flex-row justify-between py-4">
+        <div className="flex">
+          <a
+            href="/"
+            className="text-white text-lg md:text-2xl font-bold"
+          >
+            Wolf of Linea
+          </a>
+        </div>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {/* Mobile Menu Toggle Button */}
           <button
@@ -32,8 +74,8 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-        <div className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
-          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-md md:text-lg  gap-5 text-white">
+        <div className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`}>
+          <ul className="flex flex-col md:flex-row md:space-y-0 md:space-x-6 text-md md:text-lg  gap-5 text-white">
             <li>
               <a href="/" className="hover:underline">HOME</a>
             </li>
@@ -48,7 +90,14 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li>
-              <button onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</button>
+              <button onClick={()=>open()} className="text-xl md:text-2xl flex justify-between font-bold">            
+                {dispHeroButton()}
+                {account.status === "connecting" ? (
+                  <p className="m-auto">Connecting</p>
+                ) : (
+                  ""
+                )}
+              </button>
             </li>
           </ul>
         </div>
@@ -67,9 +116,16 @@ const Header: React.FC = () => {
               </a>
             </li>
           ))}
-          <li>
-            <button onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</button>
-          </li>
+            <li>
+              <button onClick={()=>open()} className="text-xl md:text-2xl font-bold">            
+                {dispHeroButton()}
+                {account.status === "connecting" ? (
+                  <p className="m-auto">Connecting</p>
+                ) : (
+                  ""
+                )}
+              </button>
+            </li>
         </ul>
       </div>
     </nav>
