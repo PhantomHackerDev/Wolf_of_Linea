@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About: React.FC = () => {
   return (
-    <div id = "about-$wolf" className="grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-16 lg:px-44 py-10 bg-[#0e1238]">
+    <div id = "about-$wolf" className="grid grid-cols-1  md:grid-cols-2 items-center px-6 md:px-16 lg:px-44 md:pt-10 md:pb-10 pt-40 bg-[#0e1238]">
       <div className="flex flex-col items-center text-white">
         <motion.div
           className="flex"

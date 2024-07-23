@@ -8,10 +8,10 @@ const Header: React.FC = () => {
   };
   return (
     <nav className="bg-[#0d0b30] sticky top-0 z-20 md:px-36 sm:p-4 w-full">
-      <div className="flex items-center justify-between p-4">
+      <div className="flex flex-row  items-center justify-between p-4">
         <a
           href="/"
-          className="text-white text-xl md:text-2xl font-bold"
+          className="text-white text-lg md:text-2xl font-bold"
         >
           Wolf of Linea
         </a>
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           </button>
         </div>
         <div className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
-          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-lg gap-5 text-white">
+          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-md md:text-lg  gap-5 text-white">
             <li>
               <a href="/" className="hover:underline">HOME</a>
             </li>
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li>
-              {/* <a href="#" onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</a> */}
+              <a href="#" onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</a>
             </li>
           </ul>
         </div>
@@ -63,9 +63,9 @@ const Header: React.FC = () => {
               </a>
             </li>
           ))}
-          {/* <li>
+          <li>
             <a href="#" className="text-xl md:text-2xl font-bold">Connect Wallet</a>
-          </li> */}
+          </li>
         </ul>
       </div>
     </nav>

@@ -10,7 +10,7 @@ const imageVariants = {
 
 const ShowImage: React.FC = () => {
   return (
-    <div className="flex flex-col w-full gap-4 sm:gap-6 md:gap-10 py-8 md:py-12 lg:py-16 bg-[#0e1238]">
+    <div className="flex flex-col w-full gap-4 md:gap-10 md:py-12 lg:py-16 bg-[#0e1238]">
       {/* <div className="grid sm:grid-cols-1 md:px-24 gap-10 md:grid-cols-5">
         <motion.img initial="hidden"
           whileInView="visible"

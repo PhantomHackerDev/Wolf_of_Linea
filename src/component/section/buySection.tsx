@@ -10,7 +10,7 @@ const BuySection: React.FC = () => {
   return (
     <div
       id="home"
-      className="flex flex-col md:flex-row w-full text-white h-screen bg-cover bg-center bg-blue-500 px-6 md:px-[5%] justify-normal md:justify-between"
+      className="flex flex-col md:flex-row w-full text-white h-screen bg-cover bg-center bg-[#0e1238] px-6 md:px-[5%] justify-normal md:justify-between"
       style={{ backgroundImage: 'url("/image/top_background.jpg")' }}
     >
       <div className="flex md:w-1/3 w-full flex-col">
@@ -115,7 +115,7 @@ const BuySection: React.FC = () => {
       </div>
       <div className="flex md:w-2/3 w-full flex-col">
         <Image className="relative  md:block hidden justify-center mt-5 items-center rounded-full  opacity-75 scale-125" src="/image/logo.png" width={128} height={128}  alt="wolfofliner logo" />
-        <div className="flex w-full rounded-xl flex-col p-5 border bg-[#0e1238]">
+        <div className="flex w-full rounded-xl md:z-0 z-10 flex-col p-5 border bg-[#0e1238]">
           <StakingForm />
         </div>
       </div>

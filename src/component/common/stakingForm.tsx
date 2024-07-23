@@ -104,14 +104,14 @@ const StakingForm = () => {
           Connect
         </button>
       </div>
-      <div className="flex py-5">
-        <div className="w-1/2 bg-white pt-4 bg-opacity-[5%] mx-3 rounded-2xl  px-5 py-0">
+      <div className="flex md:flex-row flex-col py-5 space-y-3">
+        <div className="md:w-1/2 w-full bg-white pt-4 bg-opacity-[5%] mx-3 rounded-2xl  px-5 py-0">
           <div className="flex text-[27px] text-white justify-between text-center rounded-lg items-center ">
-            <select className="bg-transparent w-[70%] py-3 rounded-lg focus:border-gray-400 border-gray-500 border  outline-none " value={stakingDuration} onChange={(e) => {setStakingDuration(Number(e.target.value))}}>
-              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={1}>1 month</option>
+            <select className="bg-transparent w-[70%] py-3 text-center rounded-lg focus:border-gray-400 border-gray-500 border  outline-none " value={stakingDuration} onChange={(e) => {setStakingDuration(Number(e.target.value))}}>
+              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={1}>1  month</option>
               <option className="bg-[#0e1238] py-2 bg-opacity-90" value={3}>3 month</option>
-              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={6}>6 month</option>
-              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={12}>12 month</option>
+              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={6}>Half year</option>
+              <option className="bg-[#0e1238] py-2 bg-opacity-90" value={12}>One year</option>
             </select>
             <Image
               src="/image/deposit.png"
@@ -144,14 +144,14 @@ const StakingForm = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/2 mx-3 rounded-2xl  px-5 py-2 h-[250px] bg-[#272A2F]">
+        <div className="md:w-1/2 w-full mx-3 rounded-2xl  px-5 py-2 h-[250px] bg-[#272A2F]">
           <div className="flex text-[27px] text-white justify-between text-center rounded-lg items-center ">
             <div className="font-mono">Unstake</div>
             <Image
               src="/image/withdraw.png"
               alt="astronaut"
               width={100} height={100}
-              className="w-[100px] h-[100px] my-auto"
+              className="w-[30%] h-auto ml-2 my-auto"
             />
           </div>
           <div className="mt-3 grid px-0">
@@ -171,7 +171,7 @@ const StakingForm = () => {
                 </button>
             </div>
             <button
-              className="mt-3 m-auto py-[1px] text-[20px] bg-white rouned-[10px] w-[37%]"
+              className="mt-3 hover:bg-opacity-30 active:bg-opacity-15 bg-gray-600 bg-opacity-20 rounded-lg m-auto py-[10px] text-[20px] rouned-[10px] w-full"
               onClick={() => {
                 
               }}
@@ -180,9 +180,6 @@ const StakingForm = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div className="flex">
-        
       </div>
       <ToastContainer autoClose={3000} style={{ paddingTop: "90px" }} />
     </>

@@ -18,6 +18,12 @@ const Header = () => {
           </li>
         ))}
       </ul>
+      <a
+        href="/"
+        className="text-white text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF61C] to-[#EA0070] font-helvetica"
+      >
+        CONNECT
+      </a>
     </div>
   );
 };
