@@ -1,8 +1,12 @@
 "use client";
 import React, {useState} from "react";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { open } = useWeb3Modal();
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -44,7 +48,7 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li>
-              <a href="#" onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</a>
+              <button onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</button>
             </li>
           </ul>
         </div>
@@ -64,7 +68,7 @@ const Header: React.FC = () => {
             </li>
           ))}
           <li>
-            <a href="#" className="text-xl md:text-2xl font-bold">Connect Wallet</a>
+            <button onClick={()=>open()} className="text-xl md:text-2xl font-bold">Connect Wallet</button>
           </li>
         </ul>
       </div>
