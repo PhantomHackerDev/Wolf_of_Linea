@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import ScrollToTopButton from "@/component/common/ScrollToTopButton";
-import { cookieToInitialState } from "wagmi";
+import { cookieToInitialState } from 'wagmi'
 // import { headers } from 'next/headers'
-import Web3ModalProvider from "@/context";
-import { config } from "@/config";
+import Web3ModalProvider from '@/context'
+import { config } from '@/config'
 
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
