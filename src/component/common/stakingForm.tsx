@@ -162,7 +162,7 @@ const StakingForm = () => {
     <>
       <div className="flex flex-row justify-between">
         <p className="text-gray-300 text-4xl mb-4 md:mb-0">Staking</p>
-        <p><input type="checkbox" onClick={() => setIsNFT(!isNFT)} /> <span className="cursor-pointer" onClick={() => setIsNFT(!isNFT)}>NFT staikng</span></p>
+        <p><input type="checkbox" onClick={() => setIsNFT(!isNFT)} /> <span className="cursor-pointer" onClick={() => setIsNFT(!isNFT)}>NFT Staking</span></p>
       </div>
       <div className="flex md:flex-row flex-col py-5">
         
@@ -214,7 +214,7 @@ const StakingForm = () => {
               className="mt-3 hover:bg-opacity-30 active:bg-opacity-15 bg-white bg-opacity-20 rounded-lg m-auto py-[10px] text-[20px] rouned-[10px] w-full"
               onClick={handleDeposit}
             >
-              Deposit
+              Stake now
             </button>
           </div>
         </div>
@@ -253,7 +253,7 @@ const StakingForm = () => {
               className="mt-3 hover:bg-opacity-30 active:bg-opacity-15 bg-white bg-opacity-20 rounded-lg m-auto py-[10px] text-[20px] rouned-[10px] w-full"
               onClick={handleUnstake}
             >
-              Withdraw
+              Unstake now
             </button>
           </div>
         </div>

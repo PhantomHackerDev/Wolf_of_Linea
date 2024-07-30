@@ -23,8 +23,8 @@ const About: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-sm md:text-base lg:text-md first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-white first-letter:me-3 first-letter:float-start"
         >
-          An open-source peer-to-peer digital currency, favoured by Shiba Inus worldwide. <br />
-          At its heart, Wolf Of Linea is the accidental crypto movement that makes people smile! It is also an open-source peer-to-peer cryptocurrency that utilises blockchain technology, a highly secure decentralised system of storing information as a public ledger that is maintained by a network of computers called nodes. More than this, though, is the ethos of Wolf Of Linea, summarised in the Wolf Of Linea Manifesto, and its amazing, vibrant community made up of friendly folks just like you!
+          Wolf of Linea: A Community DeFi Project <br />
+          Wolf of Linea is an innovative community project characterized by its deflationary dividend token, $WOLF. Users have the opportunity to stake their $WOLF tokens and earn attractive returns. Additionally, Wolf of Linea offers various NFT collections that are not only artistically valuable but also provide functional benefits. By staking NFTs, users can receive boosts on their token staking, further enhancing their returns. To support the community and optimize trading, special bots such as a Staking Bot, a BuyBot, and a Volume Bot are integrated, all contributing to the utility of the token.
         </motion.p>
       </div>
     </div>
