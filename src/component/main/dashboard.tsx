@@ -22,7 +22,7 @@ const Dashboard: React.FC = () => {
       <FaqSection />
       <ShowImage />
       <ListSection />
-      <Bigwin />
+      {/* <Bigwin /> */}
       <Footer />
       
     </div>
